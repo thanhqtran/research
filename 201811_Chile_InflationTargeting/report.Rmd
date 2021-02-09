@@ -1,0 +1,164 @@
+---
+title: "The Impact of Chile’s Inflation Targeting Policy on Economic Growth (1991 - 2017)"
+author: "Tran Quang-Thanh"
+date: "2/9/2021"
+output: html_document
+---
+### Synopsis
+**Original title:** 
+Nguyen, T. Hong., Nguyen, H. Cong., Tran, Q. Thanh., *Tác động của chính sách lạm phát mục tiêu đến tăng trưởng kinh tế Chile và bài học kinh nghiệm cho Việt Nam*, Tạp chí Kinh tế Đối ngoại No.114/2019, p. 83 - 103
+
+**English title:** 
+Nguyen, T. Hong., Nguyen, H. Cong., Tran, Q. Thanh., *The Impact of Chile’s Inflation Targeting Policy on Economic Growth and Lessons for Vietnam*, External Economics Review, No. 114/2019, p. 83-103
+
+**Institution:** Foreign Trade University, Hanoi, Vietnam
+
+**Introduction:** 
+Chile has adopted the inflation targeting monetary policy framework since 1991. The output growth ever since has remained high and economic volatility reduced. In this framework, we employed an OLS model to confirm the impact of this change in policy conduct on economic growth. Our estimation shows that thanks to the policy, economic growth has been more than 20% higher. The data were collected from 1980q1 to 2017q4.
+
+*The paper was done in Stata 12 software. Due to the growing popularity and reproducibility of R, the authors decide to redo the results in R and publish this report as a supplement to the original article. Due to the different programs being used and testing methodologies, there are some changes in numbers. Nevertheless, the authors claim that these discrepancies have no significant impact on the final conclusion.*
+
+### Abstract
+High inflation is always a threat to macroeconomic stability and long-term economic growth. Therefore, controlling inflation has become one of the most important tasks in many countries. In the early 1990s, a new trend in monetary policy conduct was formed. Numerous advanced industrial countries, as well as emerging market economies then, including Chile, started to shift towards an inflation targeting framework. From an emerging country with a high inflation rate of over 20%, Chile has become the most developed country in South America with an inflation rate of around 2% and high economic growth for many years. 
+
+How did Chile do under an inflation targeting regime?
+This paper will provide the background of inflation targeting policy, the performance of inflation targeting policy in Chile, and then evaluate the effect of inflation targeting policy on Chile's economic growth. Base on this finding, the authors draw lessons for Vietnamese policymakers if they were to pursue this policy.
+
+### The Model
+To prove the effectiveness and impacts of inflation targeting policy, we used a simple OLS regression model with inflation targeting policy acting as a dummy variable. It takes the value of 0 during the period of no-inflation-targeting era and value of 1 during the period of inflation-targeting era. The choice of dependent and independent variables are based on [Ayisi, R. (2013)](https://thescipub.com/pdf/ajebasp.2013.22.28.pdf).
+
+> $\ln(gdp)_t = \beta_0 + \beta_1 \ it_t + \beta_2 \ ir_t + \beta_3 \ u_t + \beta_4 \ r_t + \epsilon_t$
+
+in which:
+
+Variable  | Notation | Unit | Data source
+--------- | -------- | ---- | -----------
+natural log of quarterly output (ppp)    |  ln(gdp) | national currency | OECD, IMF
+inflation target| it | dummy | National Bank of Chile
+(observed) inflation rate | ir | percent | OECD
+unemployment | u | percent | OECD, various
+real interest | r | percent | OECD, various
+
+**Time periods**: 1980q1 to 2017q4
+
+**Dataset**: [link](https://github.com/thanhqtran/research/blob/main/201811_Chile_InflationTargeting/data_copy.csv) (discontinued)
+
+### Regression Results
+#### Read data file
+```{r}
+library(curl)
+df <- read.csv( curl("https://raw.githubusercontent.com/thanhqtran/research/main/201811_Chile_InflationTargeting/data_copy.csv"), header=TRUE, stringsAsFactors=FALSE)
+df$lngdp <- log(df$gdp)
+```
+
+#### Plotting
+The vertical line divides the time into 2 parts. The part on the left represents the era before the adoption of inflation targeting policy, whereas the part on the right represents the era after the adoption of inflation targeting policy.
+
+Inflation rate:
+
+```{r echo = FALSE}
+library(ggplot2)
+library(dplyr)
+df$date = seq(as.Date('1980-03-01'), as.Date('2017-12-01'), by = '3 month')
+df2 <- data.frame(df)
+p = ggplot() + 
+    geom_line(data = df2, aes(x = date, y = ir), color = "blue") +
+    geom_vline(xintercept = as.numeric(as.Date("1991-03-01"))) +
+    xlab('time')+ylab('inflation rate')
+print(p)
+```
+
+Output growth:
+
+```{r echo = FALSE}
+library(ggplot2)
+p = ggplot() + 
+    geom_line(data = df2, aes(x = date, y = lngdp), color = "blue") +
+    geom_vline(xintercept = as.numeric(as.Date("1991-03-01"))) +
+    xlab('time')+ylab('log(gdp)')
+print(p)
+```
+
+Interest rate (blue) and unemployment (red):
+
+```{r echo = FALSE}
+library(ggplot2)
+p = ggplot() + 
+    geom_line(data = df2, aes(x = date, y = r), color = "blue") +
+    geom_line(data = df2, aes(x = date, y = u), color = "red") +
+    geom_vline(xintercept = as.numeric(as.Date("1991-03-01"))) +
+    geom_boxplot() +
+    xlab('time')+ylab('percent')
+print(p)
+```
+
+It seems that the policy is very effective to stabilize the once highly volatile variables like interest rate and inflation rate.
+
+#### Descriptive summary
+```{r}
+library(stargazer)
+stargazer(df, type = "text")
+```
+Chile started to adopt the inflation targeting framework from 1991. As the result, there are 1/3 of the data lie during the no-inflation-targeting era (1980q1 - 1990q4) while the rest (2/3 of the data) lie during the inflation-targeting era(1991q1 - 2017q4). Output growth during this period was remarkably high with approximately 12% per annum.
+
+#### Unit Root Test
+Since the time series data were used, we need to perform unit root test.
+
+Test for Unit Root: Augmented Dickey-Fuller Test
+
+Null Hypothesis: there is a unit root.
+
+
++ For output growth: **log(gdp)**
+```{r}
+library(urca)
+summary(ur.df(df$lngdp, type = "none",lags=1))
+```
+We tested the stationary property of ln(gdp) with 1 period of lag. The result shows that the data is stationary.
+
++ For inflation rate: **ir**
+```{r}
+summary(ur.df(df$ir, type = "trend",lags=1))
+```
+The inflation rate data is stationary.
+
++ For unemployment rate: **u**
+```{r}
+summary(ur.df(df$u, type = "trend",lags=1))
+```
+The unemployment rate data is stationary at 5% confidence.
+
++ For real interest rate: **r**
+```{r}
+summary(ur.df(df$r, type = "trend",lags=1))
+```
+It is clear that the interest rate is non-stationary. This might be due to the fact that the absolute values were highly volatile. To reduce the volatility, we proposed a better measurement by log-linearizing it, which gives us the following result.
+
+```{r}
+df$lnr <- log(df$r)
+summary(ur.df(df$lnr, type = "trend",lags=1))
+```
+After log-linearization, the interest rate variable no longer has unit root.
+
+*To preserve the integrity of the original research, we ran 2 models: one with the original interest rate (r) and the other with log(r), then compared the results.*
+
+#### Regression results
+```{r}
+model1 <- lm(lngdp ~ it + ir + u + r, data=df)
+df$lnr <- log(df$r)
+model2 <- lm(lngdp ~ it + ir + u + lnr, data=df)
+stargazer(model1, model2, type = "text")
+```
+
+#### Interpretation
+
++ All variables are statistically significant. Looking at the R-squared statistics, around 86.8 to 90.8 percent of the changes in output growth can be explained by the chosen independent variables.
+
++ Notably, the model with log-linearized real interest rates produces higher statistical significance.
+
++ With the coefficient of 0.198, this means that thanks to the existence  of the inflation targeting policy, output in Chile has been $e^{0.198} = 1.22$ times higher than that if there were no such policy.
+
+### Reference:
++ Ayisi, R. (2013), ‘Single-digit inflation targeting and economic growth’, American Journal of Economics and Business Administration, No 5, pages 22-28
++ Banco Central de Chile (2001), 'Indicadores económicos y sociales de Chile 1960-2000'
++ Morande, F. (2001). A Decade of Inflation Targeting in Chile: Developments, Lessons, and Challenges (No. 115). Banco Central de Chile.
