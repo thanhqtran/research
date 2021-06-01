@@ -1,0 +1,50 @@
+code,industry
+TOT,Total economy (A-U)
+TOT_IND,Total industries (A-S)
+MARKT,"Market economy (all industries excluding L, O, P, Q, T and U)"
+A,"Agriculture, forestry and fishing"
+B,Mining and quarrying
+C,Total manufacturing
+C10-C12,"…Food products, beverages and tobacco"
+C13-C15,"…Textiles, wearing apparel, leather and related products"
+C16-C18,…Wood and paper products; printing and reproduction of recorded media
+C19,...Coke and refined petroleum products
+C20,…Chemicals and chemical products
+C21,…Basic pharmaceutical products and pharmaceutical preparations
+C22_C23,"…Rubber and plastics products, and other non-metallic mineral products"
+C24_C25,"…Basic metals and fabricated metal products, except machinery and equipment"
+C26,"…Computer, electronic and optical products"
+C27,…Electrical equipment
+C28,…Machinery and equipment n.e.c.
+C29_C30,…Transport equipment
+C31-C33,…Other manufacturing; repair and installation of machinery and equipment
+D,"Electricity, gas, steam and air conditioning supply"
+E,Water supply; sewerage; waste management and remediation activities
+F,Construction
+G,Wholesale and retail trade; repair of motor vehicles and motorcycles
+G45,…Wholesale and retail trade and repair of motor vehicles and motorcycles
+G46,"…Wholesale trade, except of motor vehicles and motorcycles"
+G47,"…Retail trade, except of motor vehicles and motorcycles"
+H,Transportation and storage
+H49,…Land transport and transport via pipelines
+H50,…Water transport
+H51,…Air transport
+H52,…Warehousing and support activities for transportation
+H53,…Postal and courier activities
+I,Accommodation and food service activities
+J,Information and communication
+J58-J60,"…Publishing, audio-visual and broadcasting activities"
+J61,…Telecommunications
+J62_J63,…IT and other information services
+K,Financial and insurance activities
+L,Real estate activities
+M_N,"Professional, scientific, technical, administrative and support service activities"
+O-Q,"Public administration, defence, education, human health and social work activities"
+O,Public administration and defence; compulsory social security
+P,Education
+Q,Health and social work
+R_S,"Arts, entertainment, recreation; other services and service activities, etc."
+R,"Arts, entertainment and recreation"
+S,Other service activities
+T,Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use
+U,Activities of extraterritorial organizations and bodies
