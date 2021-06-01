@@ -12,7 +12,7 @@ The development of Belgian economy can be divided into the following sub-periods
 
 ### Hicks neutral  
 #### Theory
-PF:$Y = A F(K,L) = AK^\alpha L^{1-\alpha}$  
+PF: $Y = A F(K,L) = AK^\alpha L^{1-\alpha}$  
 
 where:  
 Y: real GDP at constant prices *rgdpna*  
@@ -59,9 +59,6 @@ if not, then it is the deviation from the steady state.
 
 Per labor production function $k=K/L$:  
 $y = Ak^\alpha$  
-$\Rightarrow \frac{\dot{y}}{y} = \frac{\dot{A}}{A} + \alpha\frac{\dot{k}}{k}$  
-$\Rightarrow \frac{\dot{y}}{y} = (1-\alpha)\frac{\dot{E}}{E} + \alpha\frac{\dot{k}}{k}$  
-$\Rightarrow \frac{\dot{y}}{y} = \frac{\dot{E}}{E} + \alpha\left(\frac{\dot{k}}{k} - \frac{\dot{E}}{E}\right) (ii)$  
 $\equiv \frac{\dot{y}}{y} = \frac{\dot{E}}{E} + \alpha\frac{\dot{\tilde{k}}}{k}$
 
 #### Practice
@@ -105,12 +102,6 @@ $\omega_i = \text{firm i's technical efficiency}$
 Measure the change in $Q_i$:
 
 $d Q_i = \frac{\partial Q_i}{\partial L_i}d L_i + \frac{\partial Q_i}{\partial X_i}d X_i + \frac{\partial Q_i}{\partial \omega_i}d \omega_i$
-
-Notice that:
-
-$d L_i = \frac{\partial L_i}{\partial L_k}dL_{ik}$, $d X_i = \frac{\partial X_i}{\partial X_j}d X_{ij}$
-
-so: $d Q_i = \frac{\partial Q_i}{\partial L_k}d L_{ik} + \frac{\partial Q_i}{\partial X_j}d X_{ij} + \frac{\partial Q_i}{\partial \omega_i}d\omega_i$
 
 - Final production that goes to consumers should be:
 
