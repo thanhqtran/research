@@ -3,15 +3,18 @@
 ## Solow Residual decomposition
 
 ### Periods  
+
 The development of Belgian economy can be divided into the following sub-periods:  
-1960 - 1980: Growth was fostered by foreign investment, notably from the US  
-1980 - 1990: Following the Oil Shock in 1979 was a recession in 80-82. This period also marks the shift in regional economic structure where Flanders gradually took Wallonia's place as the economic center.  
-1990 - 1999: Economy headed towards more export-centric and further European integration.  
-1999 - 2009: The economy was fostered by regional dynamics and ICT's advancement.  
-2009 - 2019: The economy in recovering phase after the GFC.  
+1960 – 1980: Growth was fostered by foreign investment, notably from the US  
+1980 – 1990: Following the Oil Shock in 1979 was a recession in 80-82. This period also marks the shift in regional economic structure where Flanders gradually took Wallonia's place as the economic center.  
+1990 – 1999: Economy headed towards more export-centric and further European integration.  
+1999 – 2009: The economy was fostered by regional dynamics and ICT's advancement.  
+2009 – 2019: The economy in recovering phase after the GFC.  
 
 ### Hicks neutral  
+
 #### Theory
+
 PF: $Y = A F(K,L) = AK^\alpha L^{1-\alpha}$  
 
 where:  
@@ -22,6 +25,7 @@ $1 - \alpha$: labor share *labsh*
 A: TFP (to be estimated)  
 
 #### Practice
+
 To do growth accounting, use "take logs and derivatives" technique.  
 
 (1) First, take logs of both sides.  
@@ -33,20 +37,22 @@ $\frac{d\ln(Y)}{dt} = \frac{d\ln(A)}{dt} + \alpha\frac{d\ln(K)}{dt} + (1-\alpha)
 (3) Implying (i):  
 $\frac{\dot{Y}}{Y} = \frac{\dot{A}}{A} + \alpha \frac{\dot{K}}{K} + (1-\alpha)\frac{\dot{L}}{L}$  
 
-
 In R, we just need to perform steps (1) and (2) to derive the (3).  
 From there, the $\frac{\dot{A}}{A}$ term is just the residual.  
 
 #### Result
-| period    | gY       | gK        | gL        | gA        |     
-| --------- | -------- | --------- | --------- | --------- |  
-| 1960-1979 | 4.053907 | 1.5711758 | 0.2729940 | 2.2097369 |      
-| 1979-1989 | 2.119395 | 0.8705027 | 0.0549005 | 1.1939914 |      
-| 1989-1999 | 2.145152 | 0.9318447 | 0.3450963 | 0.8682110 |      
-| 1999-2009 | 1.780783 | 0.8447240 | 0.6668899 | 0.2691689 |      
 
-### Harrod Neutral:  
+| period    | gY       | gK        | gL        | gA        |
+| --------- | -------- | --------- | --------- | --------- |  
+| 1960-1979 | 4.053907 | 1.5711758 | 0.2729940 | 2.2097369 |
+| 1979-1989 | 2.119395 | 0.8705027 | 0.0549005 | 1.1939914 |
+| 1989-1999 | 2.145152 | 0.9318447 | 0.3450963 | 0.8682110 |
+| 1999-2009 | 1.780783 | 0.8447240 | 0.6668899 | 0.2691689 |
+
+### Harrod Neutral  
+
 #### Theory
+
 PF: $Y = F(K,EL) = K^\alpha L^{1-\alpha} E^{1-\alpha}$  
 
 Let $A(t) = E(t)^{1-\alpha} \Rightarrow \frac{\dot{A}}{A} = (1-\alpha)\frac{\dot{E}}{E}$  
@@ -56,12 +62,12 @@ $\Rightarrow \frac{\dot{\tilde{k}}}{\tilde{k}} = \frac{\dot{k}}{k} - \frac{\dot{
 In the steady state, $\frac{\dot{\tilde{k}}}{\tilde{k}} = 0$  
 if not, then it is the deviation from the steady state.  
 
-
 Per labor production function $k=K/L$:  
 $y = Ak^\alpha$  
 $\equiv \frac{\dot{y}}{y} = \frac{\dot{E}}{E} + \alpha\frac{\dot{\tilde{k}}}{k}$
 
 #### Practice
+
 To do growth accounting in this case:  
 
 (1) Take logs of per labor variables ($\ln(y) = \ln(Y) - \ln(L)$)  
@@ -73,13 +79,14 @@ $\Rightarrow \frac{\dot{y}}{y} = \frac{\dot{A}}{A} + \alpha\frac{\dot{k}}{k}$
 (3) Calculate growth accounting according to $(ii)$
 
 #### Result
-| period	| gy	| gk	| gE	| gkdev |
+
+| period | gy | gk | gE | gkdev |
 | --------- | --------- | --------- | --------- | --------- |
-| 1960-1979	| 3.6304203	| 1.4206835	| 6.2182126	| -0.7890534 |
-| 1979-1989	| 2.0296872	| 0.8356958	| 3.0772600	| -0.3582956 |
-| 1989-1999	| 1.5924257	| 0.7242147	| 2.3112413	| -0.1439963 |
-| 1999-2009	| 0.7237912	| 0.4546223	| 0.7293207	| 0.1854534 |
-| 2009-2019	| 0.6461867	| 0.3237279	| 0.7958232	| 0.0012690 |
+| 1960-1979 | 3.6304203 | 1.4206835 | 6.2182126 | -0.7890534 |
+| 1979-1989 | 2.0296872 | 0.8356958 | 3.0772600 | -0.3582956 |
+| 1989-1999 | 1.5924257 | 0.7242147 | 2.3112413 | -0.1439963 |
+| 1999-2009 | 0.7237912 | 0.4546223 | 0.7293207 | 0.1854534 |
+| 2009-2019 | 0.6461867 | 0.3237279 | 0.7958232 | 0.0012690 |
 
 ## APG decomposition
 
@@ -89,13 +96,13 @@ $\Rightarrow \frac{\dot{y}}{y} = \frac{\dot{A}}{A} + \alpha\frac{\dot{k}}{k}$
 
 $Q_i = Q_i (L_i, X_i, \omega_i)$
 
-where: 
+where:
 
 $Q_i = \text{firm i's output}$
 
-$L_i = \text{firm i's primary inputs} = \{L_{ik}\} = (L_{i1}, L_{i2}, ..., L_{ik})$ => firm *i* uses inputs from sector *k*. Primary inputs include labor and capital
+$L_i = \text{firm i's primary inputs} = \{L_{ik}\} = (L_{i1}, L_{i2}, ..., L_{ik})$ → firm *i* uses inputs from sector *k*. Primary inputs include labor and capital.
 
-$X_i = \text{firm i's intermediate inputs} = \{X_{ij}\} = (X_{i1}, ..., X{ij})$ => firm *i* uses output of firm *j*
+$X_i = \text{firm i's intermediate inputs} = \{X_{ij}\} = (X_{i1}, ..., X{ij})$ → firm *i* uses output of firm *j*
 
 $\omega_i = \text{firm i's technical efficiency}$
 
@@ -107,7 +114,7 @@ $d Q_i = \frac{\partial Q_i}{\partial L_i}d L_i + \frac{\partial Q_i}{\partial X
 
 $Y_i = Q_i - \sum_j X_{ji}$
 
-where: 
+where:
 
 $Q_i = \text{firm i's total production}$
 
@@ -153,24 +160,27 @@ $\beta$ term is the Elasticity of output wrt input $\beta_{ik} = \frac{\partial 
 
 $s$ as factor income share: $s_{ik} = \frac{W_{ik}L_{ik}}{P_iQ_i}, s_{ij} = \frac{P_{ij}X_{ij}}{P_iQ_i}$
 
-#### Practice:
+#### Practice
+
 (1) We import important variables from the subset  
 (2) Calculate the Domar weights (VA and GO). From here, we can calculate $\beta$  
 (3) $\beta$ Estimation
 (4) Divide the time periods then calculate the difference & weighted moving average  
-(5) Perform growth accounting  
+(5) Perform growth accounting.  
 
 #### Result
-RE as reallocation 
+
+RE as reallocation
 TE as technical growth
 Values are in average annual growth (%)
 
-| period    |	g_APG  |	TE     |	RE	   | RE_LAB    |	RE_CAP |	RE_II  |
+| period    | g_APG  | TE     | RE    | RE_LAB    | RE_CAP | RE_II  |
 | --------- |--------- | --------- | --------- | --------- | --------- | --------- |
-| 1999-2003 |	0.5704 |	0.5292 |	0.0420 |	0.0251 |	0.0066 |	0.0103 |
-| 2003-2007 |	1.3052 |	1.2330 |	0.0759 |   -0.0132 |	0.0212 |	0.0679 |
-| 2007-2011 |	0.1142 |	0.1053 |	0.0089 |	0.0086 |   -0.0366 |	0.0369 |
-| 2011-2014 |	0.1292 |	0.1271 |	0.0021 |   -0.0048 |   -0.0007 |	0.0076 |
-| 2014-2017 |	0.2974 |	0.2903 |	0.0072 |   -0.0117 |	0.0146 |	0.0044 |
+| 1999-2003 | 0.5704 | 0.5292 | 0.0420 | 0.0251 | 0.0066 | 0.0103 |
+| 2003-2007 | 1.3052 | 1.2330 | 0.0759 |   -0.0132 | 0.0212 | 0.0679 |
+| 2007-2011 | 0.1142 | 0.1053 | 0.0089 | 0.0086 |   -0.0366 | 0.0369 |
+| 2011-2014 | 0.1292 | 0.1271 | 0.0021 |   -0.0048 |   -0.0007 | 0.0076 |
+| 2014-2017 | 0.2974 | 0.2903 | 0.0072 |   -0.0117 | 0.0146 | 0.0044 |
 
 Rpubs: [link](https://rpubs.com/thanhqtran/775009)
+(As math mode is not supported on Git, it's easier to see on Rpubs repo).
