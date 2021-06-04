@@ -25,7 +25,7 @@ Benin,BJ,BEN,204
 Bermuda,BM,BMU,060
 Bhutan,BT,BTN,064
 Bolivia (Plurinational State of),BO,BOL,068
-Bonaire, Sint Eustatius and Saba,BQ,BES,535
+Bonaire and Sint Eustatius and Saba,BQ,BES,535
 Bosnia and Herzegovina,BA,BIH,070
 Botswana,BW,BWA,072
 Bouvet Island,BV,BVT,074
@@ -167,7 +167,7 @@ Norway,NO,NOR,578
 Oman,OM,OMN,512
 Pakistan,PK,PAK,586
 Palau,PW,PLW,585
-Palestine, State of,PS,PSE,275
+Palestine,PS,PSE,275
 Panama,PA,PAN,591
 Papua New Guinea,PG,PNG,598
 Paraguay,PY,PRY,600
@@ -184,7 +184,7 @@ Russian Federation (the),RU,RUS,643
 Rwanda,RW,RWA,646
 Réunion,RE,REU,638
 Saint Barthélemy,BL,BLM,652
-Saint Helena, Ascension and Tristan da Cunha,SH,SHN,654
+Saint Helena and Ascension and Tristan da Cunha,SH,SHN,654
 Saint Kitts and Nevis,KN,KNA,659
 Saint Lucia,LC,LCA,662
 Saint Martin (French part),MF,MAF,663
@@ -217,7 +217,7 @@ Switzerland,CH,CHE,756
 Syrian Arab Republic,SY,SYR,760
 Taiwan (Province of China),TW,TWN,158
 Tajikistan,TJ,TJK,762
-Tanzania, United Republic of,TZ,TZA,834
+Tanzania,TZ,TZA,834
 Thailand,TH,THA,764
 Timor-Leste,TL,TLS,626
 Togo,TG,TGO,768
