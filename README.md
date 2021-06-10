@@ -123,7 +123,11 @@ General convention: **order_name_version**
 # External Links:
 
 [My Rpubs](https://rpubs.com/thanhqtran/)
+
 [My Google Sites](https://sites.google.com/view/tranquangthanh)
+
 [My Vietnamese blog](https://nipponkiyoshi.com/)
+
 [Naming Tips](https://datacarpentry.org/rr-organization1/01-file-naming/index.html)
+
 [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/)
