@@ -138,3 +138,11 @@ General convention: **order_name_version**
 [Naming Tips](https://datacarpentry.org/rr-organization1/01-file-naming/index.html)
 
 [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/)
+
+[Pandoc (Doc Converter)](https://pandoc.org/try/?text=&from=latex&to=&standalone=0)
+
+[LaTeX Formatter (works with Grammarly)](https://c.albert-thompson.com/latex-pretty/)
+
+[Table Generator](https://www.tablesgenerator.com/text_tables)
+
+[Table Converter](https://tableconvert.com/)
