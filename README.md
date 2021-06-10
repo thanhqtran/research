@@ -63,6 +63,15 @@ General convention: **order_name_version**
 ## Hierachy
 
 ```
+
+    00_Database
+    │   README.md
+    │   
+    └───PWT
+    └───Madison
+    └───EUKLEMS
+    
+        
     01_Project 
     │
     │ 
@@ -92,8 +101,9 @@ General convention: **order_name_version**
                 │   url
                 │   
                 └───lectures
-                │   │   date_lecture_01.pdf
-                │   │   date_lecture_02.pdf
+                │   │   date_lecture01.pdf
+                │   │   date_lecture02.pdf
+                │   │   date_lecture01_mynotes.pdf
                 │   
                 └───code
                 └───exercises
@@ -118,13 +128,6 @@ General convention: **order_name_version**
                 │
                 └───docs
 
-
-    04_Database
-    │   README.md
-    │   
-    └───PWT
-    └───Madison
-    └───EUKLEMS
 ```
 
 # External Links:
