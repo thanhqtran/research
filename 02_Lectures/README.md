@@ -3,13 +3,13 @@
 [Groth (Copenhagen)](https://web.econ.ku.dk/okocg/VM/VM-general/Material/Chapters-VM.htm)
 
 + [One file (from Ch6 onwards)](https://web2.econ.ku.dk/okocg/VM/VM16/Lectures%20and%20lecture%20notes/Lecture%20Notes%20in%20one%20file%20VM%202016.pdf)
-+ 
+ 
 + [Errata](https://web2.econ.ku.dk/okocg/VM/VM16/Material/Errata%20to%20lecture%20notes%20VM%202016.htm)
-+ 
+ 
 + [His course](https://web2.econ.ku.dk/okocg/VM/VM16/Advanced%20Macro-2016.htm)
-+ 
+
 + [His exercises](https://www.economics.ku.dk/staff/vip/?pure=en%2Fpersons%2Fchristian-groth(bc3cc402-5f91-49e7-a653-860ed5ca1848)%2Fpublications.html&filter=education)
-+ 
+ 
 + [Bonus](https://web2.econ.ku.dk/okocg/VM/VM-general/diverse_supplerende_materiale_og_links.htm)
 
 
