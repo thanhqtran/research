@@ -1,7 +1,8 @@
 # Research Repository
 
 An archive for my research, database and lecture notes.
-El. Psy. Kongroo.
+
+**El. Psy. Kongroo.**
 
 # Abbreviations:
 
@@ -45,15 +46,21 @@ Greek symbols plugin for IntelliJ IDEA
 # Naming
 
 Date format: **yyyymmdd**
+
 Field Seperators: **_** (dash)
+
 Word Seperators: **-** (hyphen)
+
 Chronological order: use **date_name**
+
 Logical order: use **01_name**
 
+
 Code chunk naming: **section_subsection_desc**
+
 General convention: **order_name_version**
 
-**Hierachy** 
+## Hierachy
 
 ```
     01_Project 
