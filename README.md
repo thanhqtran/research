@@ -45,7 +45,7 @@ Greek symbols plugin for IntelliJ IDEA
 
 # Naming
 
-Date format: **yyyymmdd**
+Date format: **yymmdd**
 
 Field Seperators: **_** (dash)
 
