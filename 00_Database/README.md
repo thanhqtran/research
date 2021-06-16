@@ -1,4 +1,4 @@
-# List of Database for Macroeconomic research:
+# List of Database for Macroeconomic research
 
 ## World
 
@@ -19,11 +19,11 @@
 [ILO's factor income share](https://ilostat.ilo.org/topics/labour-income/)
 
 ## Regional
+
 [ASEAN Stats](https://data.aseanstats.org/)
 
 [Vietnam's GSO](https://www.gso.gov.vn/en/data-and-statistics/)
 
 [Vietnam's MOF](https://www.mof.gov.vn/webcenter/portal/btc/r/lvtc/slnsnn/slqt?_afrLoop=2061829362692642#%40%3F_afrLoop%3D2061829362692642%26centerWidth%3D100%2525%26leftWidth%3D0%2525%26rightWidth%3D0%2525%26showFooter%3Dfalse%26showHeader%3Dfalse%26_adf.ctrl-state%3Dwtx8d9spu_107)
-
 
 Updated: 2021/06/16
