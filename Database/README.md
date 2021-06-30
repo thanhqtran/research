@@ -26,7 +26,7 @@
 
 [Vietnam's MOF](https://www.mof.gov.vn/webcenter/portal/btc/r/lvtc/slnsnn/slqt?_afrLoop=2061829362692642#%40%3F_afrLoop%3D2061829362692642%26centerWidth%3D100%2525%26leftWidth%3D0%2525%26rightWidth%3D0%2525%26showFooter%3Dfalse%26showHeader%3Dfalse%26_adf.ctrl-state%3Dwtx8d9spu_107)
 
-## External Sources:
+## External Sources
 
 [Macroeconomics Data Sources](https://libguides.umn.edu/c.php?g=843682&p=6527336)
 
