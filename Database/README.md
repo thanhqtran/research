@@ -32,5 +32,6 @@
 
 Updated: 2021/06/30
 
-Release note:
+**Release note:**
+
 2021/06/30: added State Budget Balances for Vietnam
