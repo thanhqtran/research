@@ -18,6 +18,8 @@
 
 [ILO's factor income share](https://ilostat.ilo.org/topics/labour-income/)
 
+[Disasters Database](https://public.emdat.be/)
+
 ## Regional
 
 [ASEAN Stats](https://data.aseanstats.org/)
